@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Control Player.fm",
+  "description": "Play and pause Player.fm.",
+  "version": "1.0",
+  "icons": {
+    "16": "logo_16.png",
+    "48": "logo_48.png"
+  },
+  "web_accessible_resources": ["inject.js"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "pause.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://player.fm/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
